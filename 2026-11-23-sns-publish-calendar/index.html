@@ -183,17 +183,8 @@ h1{font-size:26px;font-weight:900;letter-spacing:-.035em;margin:0;text-wrap:bala
 .ig{border:1px solid var(--line);border-radius:14px;background:var(--surface);
   overflow:hidden;box-shadow:var(--shadow);
   display:flex;flex-direction:column;max-height:calc(100vh - 40px)}
-.ig-profile{flex:0 0 auto;padding:18px 16px 16px;border-bottom:1px solid var(--line-soft);
-  display:flex;flex-direction:column;gap:12px}
-.ig-profile-top{display:flex;align-items:center;gap:14px}
-.ig-avatar{width:58px;height:58px;border-radius:50%;flex-shrink:0;
-  background:var(--accent-pale);color:var(--accent-ink);border:1px solid var(--line);
-  display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:900}
-.ig-name{font-size:14px;font-weight:800;line-height:1.3}
-.ig-handle{font-size:12px;color:var(--ink-faint);line-height:1.3;margin-top:2px}
-.ig-counts{display:flex;gap:16px;font-size:12px;color:var(--ink-soft)}
-.ig-counts b{color:var(--ink);font-variant-numeric:tabular-nums}
-.ig-note{font-size:11.5px;color:var(--ink-faint);line-height:1.5;margin:0}
+.ig-shot{flex:0 0 auto;line-height:0;background:#fff;overflow:hidden;border-bottom:1px solid var(--line-soft)}
+.ig-shot img{display:block;width:100%;height:auto}
 .ig-grid{position:relative;display:flex;flex-wrap:wrap;gap:2px;
   padding:0;flex:1 1 auto;min-height:0;overflow-y:auto;overflow-x:hidden;
   scrollbar-width:none;background:var(--line)}
@@ -201,7 +192,7 @@ h1{font-size:26px;font-weight:900;letter-spacing:-.035em;margin:0;text-wrap:bala
 .tile{position:relative;display:block;width:calc((100% - 4px)/3);flex:0 0 auto;overflow:hidden;
   text-decoration:none;color:inherit;background:var(--surface-2);outline:2px solid transparent;outline-offset:-2px}
 .tile:hover,.tile:focus-visible,.tile.tile-hl{outline-color:var(--accent)}
-.tile::before{content:"";display:block;padding-top:125%}
+.tile::before{content:"";display:block;padding-top:133.333%}
 .tile-img{position:absolute;inset:0;z-index:1}
 .tile-img img{width:100%;height:100%;object-fit:cover;display:block}
 .tile-empty{background:var(--surface-2)}
@@ -274,7 +265,11 @@ footer a{color:inherit}
   .stats{grid-template-columns:repeat(2,1fr)}
   .wrap{padding:28px 15px 70px}
   h1{font-size:21px}
-  .col-n{display:none}
+  .col-n,.col-mag{display:none}
+  .col-date{width:44px;font-size:12.5px}
+  .col-cat{width:auto}
+  .col-cat .pill{font-size:11px;padding:2px 7px}
+  .col-link{width:44px}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 </style>
@@ -289,26 +284,30 @@ footer a{color:inherit}
       <div class="masthead">
         <span class="eyebrow">SNS · 카드뉴스 발행 트래커</span>
         <h1>쏘마지 코스메틱 SNS 발행 캘린더</h1>
-        <p class="masthead-sub">ZISHEL XOMAGE 마스크팩 · 미국 아마존 판매용 영문 계정. 아직 등록된 게시글이 없는 빈 틀이다. 게시글은 <a href="https://app.notion.com/p/41e7195a2a6e81bb8544c1ce4aebfe3c" target="_blank" rel="noopener">노션 발행 트래커</a>에서 관리하고, 게시글이 들어오면 이 틀에 월별로 채운다. (생성: 2026-11-23)</p>
+        <p class="masthead-sub">ZISHEL XOMAGE 마스크팩 · 미국 아마존 판매용 영문 계정 <b>@zishelxomage.cosmetic</b>. 2026-09-21에 올린 게시글 <b>3건</b>(발행 완료)의 이미지와 캡션을 넣었다. 이후 게시글은 <a href="https://app.notion.com/p/41e7195a2a6e81bb8544c1ce4aebfe3c" target="_blank" rel="noopener">노션 발행 트래커</a>에 등록하면 이 표에 날짜순으로 추가한다. 우측 인스타 그리드는 날짜 역순. (최신 갱신: 2026-11-23)</p>
       </div>
 
       <div class="stats">
-        <div class="stat"><div class="stat-num">0</div><div class="stat-label">캘린더 표 전체 행</div></div>
+        <div class="stat"><div class="stat-num">3</div><div class="stat-label">캘린더 표 전체 행</div></div>
         <div class="stat is-accent"><div class="stat-num">0</div><div class="stat-label">발행 예정</div></div>
-        <div class="stat"><div class="stat-num">0</div><div class="stat-label">발행 완료</div></div>
-        <div class="stat"><div class="stat-num">0</div><div class="stat-label">카드뉴스 구성</div></div>
+        <div class="stat"><div class="stat-num">3</div><div class="stat-label">발행 완료 (표 내 ✅배지)</div></div>
+        <div class="stat"><div class="stat-num">3</div><div class="stat-label">이미지 단독 (카드뉴스 0)</div></div>
       </div>
 
       <details class="flags">
-        <summary>진행 상태 · 확인 포인트 <span class="flags-count">2건</span></summary>
+        <summary>진행 상태 · 확인 포인트 <span class="flags-count">3건</span></summary>
         <div class="flags-body">
+          <div class="flag ok">
+            <span class="flag-ico">📷</span>
+            <div class="flag-body"><b>인스타그램 3건 반영 (2026-11-23)</b> — @zishelxomage.cosmetic 프로필의 게시물 3건(2026-09-21 업로드)에서 이미지와 캡션을 가져왔다. 캡션은 세 건 모두 해시태그 2개(#xomage #xomagecosmetic)뿐이다. 날짜는 한국 시간 기준이고, 인스타그램 이미지 설명에는 미국 시간 기준 9/20으로 적혀 있다.</div>
+          </div>
           <div class="flag note">
-            <span class="flag-ico">🧱</span>
-            <div class="flag-body"><b>빈 틀 상태 (2026-11-23)</b> — 레몬더마 발행 캘린더와 같은 구성(상단 통계 · 진행 상태 · 월별 발행 표 · 인스타 그리드 · 발행 완료 목록)만 먼저 만들었다. 게시글, 대표이미지, 프로필 화면은 아직 없다.</div>
+            <span class="flag-ico">🧩</span>
+            <div class="flag-body"><b>3분할 파노라마</b> — 세 게시물은 가로로 이어지는 한 장의 이미지를 셋으로 나눈 것이다. 인스타 그리드에서 왼쪽(3번) · 가운데(2번) · 오른쪽(1번)이 이어져 보인다. 한 건씩 따로 볼 때는 이미지가 잘려 보일 수 있다.</div>
           </div>
           <div class="flag ok">
             <span class="flag-ico">🔗</span>
-            <div class="flag-body"><b>노션 트래커 연결</b> — 주제 · 카테고리 · 덱 상태 · 발행일은 노션 "쏘마지 코스메틱 SNS 게시글 · 발행 트래커"가 원본이다. 게시글이 등록되면 이 페이지에 같은 순서로 옮긴다. 캡션은 영문(EN)이 기준이고 한글은 참고용이다.</div>
+            <div class="flag-body"><b>노션 트래커 연결</b> — 주제 · 카테고리 · 덱 상태 · 발행일은 노션 "쏘마지 코스메틱 SNS 게시글 · 발행 트래커"가 원본이고, 3건 모두 노션에 같은 내용으로 등록했다. 캡션은 영문(EN)이 기준이고 한글은 참고용이다.</div>
           </div>
         </div>
       </details>
@@ -323,6 +322,13 @@ footer a{color:inherit}
 
       <section class="month">
         <h3 class="month-head"><span>발행 예정</span><span class="month-count">0건</span></h3>
+        <table class="cal-table"><tbody>
+<tr class="empty-row"><td class="empty-cell" colspan="6"><b>예정된 게시글이 없습니다</b>다음 게시글은 노션 트래커에 등록하면 날짜순으로 여기에 표시된다.</td></tr>
+        </tbody></table>
+      </section>
+
+      <section class="month">
+        <h3 class="month-head"><span>9월 · Sep</span><span class="month-count">3건</span></h3>
         <table class="cal-table"><tbody>
 <!--
   게시글 행 템플릿 (복사해서 아래 empty-row 위에 붙인다. id는 post-1, post-2 … 순서대로,
@@ -344,15 +350,62 @@ footer a{color:inherit}
 <td class="col-link"><a href="노션 게시글 URL" target="_blank" rel="noopener">노션 →</a></td>
 </tr>
 -->
-<tr class="empty-row"><td class="empty-cell" colspan="6"><b>아직 등록된 게시글이 없습니다</b>노션 트래커에 첫 게시글이 들어오면 여기에 날짜순으로 표시된다.</td></tr>
+<tr id="post-1" class="row-brand">
+<td class="col-n">1</td>
+<td class="col-date">9/21<span class="wd">(월)</span></td>
+<td class="col-cat"><span class="pill pill-brand">브랜드 방향</span></td>
+<td class="col-title">
+  <details class="row-toggle"><summary class="row-toggle-sum">Special Lyophilized Exosomes · All-in-One Edition<span class="badge badge-ok">업로드 완료 ✅</span></summary>
+  <div class="title-ko">브랜드 방향 · 3분할 그리드 우측 · 동결건조 엑소좀 바이알 박스</div>
+  <div class="scene">✅ 2026-09-21 업로드 완료 · Instagram · 단독 이미지 1장</div>
+  <details class="pc-toggle"><summary>게시글 내용 보기</summary><div class="pc-body"><div class="pc-block"><h4>🇬🇧 English</h4><p>#xomage #xomagecosmetic</p></div><div class="pc-block"><h4>🇰🇷 한글 (참고용)</h4><p class="pc-empty">해시태그만 있는 캡션이라 번역할 본문이 없다.</p></div></div></details></details></td>
+<td class="col-mag"><a href="https://www.instagram.com/zishelxomage.cosmetic/p/DdiDtt7h8ug/" target="_blank" rel="noopener">인스타 ↗</a></td>
+<td class="col-link"><a href="https://app.notion.com/p/4217195a2a6e8142b398f420992361ed" target="_blank" rel="noopener">노션 →</a></td>
+</tr>
+<tr id="post-2" class="row-brand">
+<td class="col-n">2</td>
+<td class="col-date">9/21<span class="wd">(월)</span></td>
+<td class="col-cat"><span class="pill pill-brand">브랜드 방향</span></td>
+<td class="col-title">
+  <details class="row-toggle"><summary class="row-toggle-sum">ZISHEL XOMAGE EXO-PDRN Mask<span class="badge badge-ok">업로드 완료 ✅</span></summary>
+  <div class="title-ko">브랜드 방향 · 3분할 그리드 가운데 · 마스크팩 박스</div>
+  <div class="scene">✅ 2026-09-21 업로드 완료 · Instagram · 단독 이미지 1장</div>
+  <details class="pc-toggle"><summary>게시글 내용 보기</summary><div class="pc-body"><div class="pc-block"><h4>🇬🇧 English</h4><p>#xomage #xomagecosmetic</p></div><div class="pc-block"><h4>🇰🇷 한글 (참고용)</h4><p class="pc-empty">해시태그만 있는 캡션이라 번역할 본문이 없다.</p></div></div></details></details></td>
+<td class="col-mag"><a href="https://www.instagram.com/zishelxomage.cosmetic/p/DdiDzJzBUpf/" target="_blank" rel="noopener">인스타 ↗</a></td>
+<td class="col-link"><a href="https://app.notion.com/p/4217195a2a6e812f8d82f75313a87847" target="_blank" rel="noopener">노션 →</a></td>
+</tr>
+<tr id="post-3" class="row-brand">
+<td class="col-n">3</td>
+<td class="col-date">9/21<span class="wd">(월)</span></td>
+<td class="col-cat"><span class="pill pill-brand">브랜드 방향</span></td>
+<td class="col-title">
+  <details class="row-toggle"><summary class="row-toggle-sum">Cell-Platform Activator · All-in-One Edition<span class="badge badge-ok">업로드 완료 ✅</span></summary>
+  <div class="title-ko">브랜드 방향 · 3분할 그리드 좌측 · 열린 박스 컷</div>
+  <div class="scene">✅ 2026-09-21 업로드 완료 · Instagram · 단독 이미지 1장</div>
+  <details class="pc-toggle"><summary>게시글 내용 보기</summary><div class="pc-body"><div class="pc-block"><h4>🇬🇧 English</h4><p>#xomage #xomagecosmetic</p></div><div class="pc-block"><h4>🇰🇷 한글 (참고용)</h4><p class="pc-empty">해시태그만 있는 캡션이라 번역할 본문이 없다.</p></div></div></details></details></td>
+<td class="col-mag"><a href="https://www.instagram.com/zishelxomage.cosmetic/p/DdiD0uMB2fc/" target="_blank" rel="noopener">인스타 ↗</a></td>
+<td class="col-link"><a href="https://app.notion.com/p/4217195a2a6e811a9ec8ed12597d6e5a" target="_blank" rel="noopener">노션 →</a></td>
+</tr>
         </tbody></table>
       </section>
 
       <section class="done">
         <details class="donebox">
-          <summary>발행 완료 <span class="done-count">0건</span></summary>
+          <summary>발행 완료 <span class="done-count">3건</span></summary>
           <div class="done-body">
-            <p class="done-lead">아직 발행된 게시글이 없습니다. 발행이 끝난 게시글은 표에서 빼고 이 목록으로 옮긴다.</p>
+            <p class="done-lead">2026-09-21 인스타그램에 올린 3건. 세 이미지는 한 장의 파노라마를 나눈 것이다.</p>
+            <div class="pub">
+              <div class="pub-head"><span class="pub-date">9/21<span class="wd">(월)</span></span><span class="pub-title">Special Lyophilized Exosomes · All-in-One Edition</span><span class="pub-ch">Instagram · 단독 이미지</span><a class="pub-link" href="https://www.instagram.com/zishelxomage.cosmetic/p/DdiDtt7h8ug/" target="_blank" rel="noopener">인스타 ↗</a></div>
+              <p class="pub-pts">동결건조 엑소좀 바이알 박스 컷. 3분할 파노라마의 오른쪽 타일. 캡션은 해시태그 2개(#xomage #xomagecosmetic).</p>
+            </div>
+            <div class="pub">
+              <div class="pub-head"><span class="pub-date">9/21<span class="wd">(월)</span></span><span class="pub-title">ZISHEL XOMAGE EXO-PDRN Mask</span><span class="pub-ch">Instagram · 단독 이미지</span><a class="pub-link" href="https://www.instagram.com/zishelxomage.cosmetic/p/DdiDzJzBUpf/" target="_blank" rel="noopener">인스타 ↗</a></div>
+              <p class="pub-pts">EXO-PDRN 마스크팩 박스가 가운데에 선 제품 라인업 컷. 3분할 파노라마의 가운데 타일. 캡션은 해시태그 2개(#xomage #xomagecosmetic).</p>
+            </div>
+            <div class="pub">
+              <div class="pub-head"><span class="pub-date">9/21<span class="wd">(월)</span></span><span class="pub-title">Cell-Platform Activator · All-in-One Edition</span><span class="pub-ch">Instagram · 단독 이미지</span><a class="pub-link" href="https://www.instagram.com/zishelxomage.cosmetic/p/DdiD0uMB2fc/" target="_blank" rel="noopener">인스타 ↗</a></div>
+              <p class="pub-pts">열린 박스 컷. 3분할 파노라마의 왼쪽 타일(가장 최근 게시물). 캡션은 해시태그 2개(#xomage #xomagecosmetic).</p>
+            </div>
           </div>
         </details>
       </section>
@@ -361,17 +414,7 @@ footer a{color:inherit}
 
     <div class="igcol">
       <div class="ig">
-        <div class="ig-profile">
-          <div class="ig-profile-top">
-            <div class="ig-avatar">X</div>
-            <div>
-              <div class="ig-name">쏘마지 코스메틱</div>
-              <div class="ig-handle">계정명 · 계정 개설 후 입력</div>
-            </div>
-          </div>
-          <div class="ig-counts"><span><b>0</b> 게시물</span></div>
-          <p class="ig-note">계정이 열리면 이 자리에 실제 프로필 화면을 넣는다. 아래 그리드는 게시글이 등록되면 날짜 역순으로 채워진다.</p>
-        </div>
+        <div class="ig-shot"><img src="img/ig-profile.png" alt="@zishelxomage.cosmetic 인스타그램 프로필 실제 화면 (2026/11/23 기준)"></div>
         <div class="ig-bar">
           <label class="ig-capsw"><input type="checkbox" id="capAlways"><span>캡션 항상 보기</span></label>
         </div>
@@ -388,12 +431,30 @@ footer a{color:inherit}
 <span class="tile-img"><img src="대표이미지 경로" loading="lazy" alt=""></span>
 </a>
 -->
-<div class="tile tile-empty" aria-hidden="true"></div>
-<div class="tile tile-empty" aria-hidden="true"></div>
-<div class="tile tile-empty" aria-hidden="true"></div>
-<div class="tile tile-empty" aria-hidden="true"></div>
-<div class="tile tile-empty" aria-hidden="true"></div>
-<div class="tile tile-empty" aria-hidden="true"></div>
+<a class="tile" href="https://app.notion.com/p/4217195a2a6e811a9ec8ed12597d6e5a" target="_blank" rel="noopener" data-row="post-3">
+<span class="tile-cap">
+  <span class="cap-head"><span class="cap-date">9/21</span><span class="cap-cat pill pill-brand">브랜드 방향</span></span>
+  <span class="cap-en">Cell-Platform Activator · All-in-One Edition</span>
+  <span class="cap-ko">열린 박스 컷 (그리드 좌)</span>
+</span>
+<span class="tile-img"><img src="img/post-3.jpg" loading="lazy" alt="Cell-Platform Activator · All-in-One Edition"></span>
+</a>
+<a class="tile" href="https://app.notion.com/p/4217195a2a6e812f8d82f75313a87847" target="_blank" rel="noopener" data-row="post-2">
+<span class="tile-cap">
+  <span class="cap-head"><span class="cap-date">9/21</span><span class="cap-cat pill pill-brand">브랜드 방향</span></span>
+  <span class="cap-en">ZISHEL XOMAGE EXO-PDRN Mask</span>
+  <span class="cap-ko">마스크팩 박스 (그리드 가운데)</span>
+</span>
+<span class="tile-img"><img src="img/post-2.jpg" loading="lazy" alt="ZISHEL XOMAGE EXO-PDRN Mask"></span>
+</a>
+<a class="tile" href="https://app.notion.com/p/4217195a2a6e8142b398f420992361ed" target="_blank" rel="noopener" data-row="post-1">
+<span class="tile-cap">
+  <span class="cap-head"><span class="cap-date">9/21</span><span class="cap-cat pill pill-brand">브랜드 방향</span></span>
+  <span class="cap-en">Special Lyophilized Exosomes · All-in-One Edition</span>
+  <span class="cap-ko">동결건조 엑소좀 바이알 박스 (그리드 우)</span>
+</span>
+<span class="tile-img"><img src="img/post-1.jpg" loading="lazy" alt="Special Lyophilized Exosomes · All-in-One Edition"></span>
+</a>
         </div>
       </div>
     </div>
@@ -401,7 +462,7 @@ footer a{color:inherit}
 
   <footer>
     <p>게시글 한 건의 본문 구성(🇬🇧 English · 🇰🇷 한글 · 🎴 카드뉴스 구성 · 📷 비주얼 지시 · ✅ 발행 전 검수 · 📚 근거)은 노션 트래커의 게시글 페이지에 있다.</p>
-    <p>이 페이지는 레몬더마 SNS 발행 캘린더와 같은 구성의 쏘마지 코스메틱용 빈 틀이다. 색은 임시 값이고 브랜드 색이 정해지면 바꾼다.</p>
+    <p>이 페이지는 레몬더마 SNS 발행 캘린더와 같은 구성이다. 대표이미지와 프로필 화면은 인스타그램 @zishelxomage.cosmetic에서 가져왔다(2026-11-23). 색은 임시 값이고 브랜드 색이 정해지면 바꾼다.</p>
   </footer>
 </div>
 
